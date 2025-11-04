@@ -11,8 +11,7 @@ export default function Home() {
       <a href="#" className="m-10">Projetos</a>
       <a href="#" className="m-10">Contato</a>
       </div>
-
-
+      
     </div>
 
   );
