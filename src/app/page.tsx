@@ -1,7 +1,8 @@
 
+
 export default function Home() {
   return (
-    <div className=" font-bold text-white bg-black p-10">
+    <div className="min-h-screen font-bold text-white p-10">
       <h1 className="text-center font-sans">Olá, meu nome é Lucas Bruno Calle Chambi</h1>
       <p className="text-center">Desenvolvedor Web</p>
 
@@ -10,6 +11,9 @@ export default function Home() {
       <a href="#" className="m-10">Projetos</a>
       <a href="#" className="m-10">Contato</a>
       </div>
-    </div> 
+
+
+    </div>
+
   );
 }
