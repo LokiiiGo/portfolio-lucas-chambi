@@ -1,242 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slideshow Interativo com Autoplay</title>
+    <title>Slideshow Interativo</title>
+    <!-- Carrega o Tailwind CSS para estilização moderna e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        :root {
+        /* Define a fonte Inter como padrão */
+        body {
             font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
         }
-        /* Classe para transição suave da imagem */
-        .slide-image {
-            transition: opacity 0.5s ease-in-out;
+
+        /* Estilos básicos para os slides (serão controlados por JS) */
+        .mySlides {
+            display: none;
+            /* Esconde todos os slides por padrão */
+        }
+
+        /* Efeito de transição */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* Estilo para os pontos de navegação ativos */
+        .active-dot {
+            background-color: #10b981;
+            /* cor teal */
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
 
-    <div id="slideshow-container" class="w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden transform transition duration-500 hover:shadow-2xl">
+<body class="p-4 sm:p-8 flex justify-center items-center min-h-screen">
 
-        <div class="relative aspect-video bg-gray-900 flex items-center justify-center">
+    <div class="w-full max-w-4xl bg-white shadow-2xl rounded-xl overflow-hidden p-6 sm:p-10">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-6 text-center border-b-2 border-teal-500 pb-3">
+            Meus projetos
+        </h1>
 
-            <img id="slide-image" src="" alt="Slide Atual" class="slide-image w-full h-full object-cover opacity-0">
-            
-            <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center text-white text-xl animate-pulse">
-                Carregando...
+        <!-- Contêiner do Slideshow -->
+        <div class="relative mx-auto" style="max-width: 800px;">
+
+            <!-- Slides (Estrutura HTML) -->
+            <div class="mySlides fade">
+                <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+                    <h2 class="text-2xl font-bold text-black mb-3">Art</h2>
+                    <p class="text-gray-700 mb-6">
+                        Um projeto em que cada obra de arte é concebida com esmero e originalidade.
+                        <img src="/public/art.png" alt="art">
+                    </p>
+                    <!-- Link Clicável -->
+                    <a href="https://lokiiigo.github.io/Art/" target="_blank"
+                        class="inline-block px-6 py-2 text-white font-semibold rounded-full bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-md">
+                        Clique aqui!
+                    </a>
+                </div>
             </div>
 
-            <button id="prev-btn" class="absolute left-4 p-3 bg-black bg-opacity-30 hover:bg-opacity-60 text-white rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/50" aria-label="Slide Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
+            <div class="mySlides fade">
+                <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+                    <h2 class="text-2xl font-bold text-black mb-3">Blog de Programação</h2>
+                    <p class="text-gray-700 mb-6">
+                        É um site de blog , onde o usuário sem conhecimento prévio poderá aprender sobre Linguagens de
+                        Programação e a Lógica de Programação.
+                        <img src="/public/blog.png" alt="blog-programação">
+                    </p>
+                    <!-- Link Clicável -->
+                    <a href="https://github.com/LokiiiGo/Blog" target="_blank"
+                        class="inline-block px-6 py-2 text-white font-semibold rounded-full bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-md">
+                        Clique aqui!
+                    </a>
+                </div>
+            </div>
 
-            <button id="next-btn" class="absolute right-4 p-3 bg-black bg-opacity-30 hover:bg-opacity-60 text-white rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/50" aria-label="Próximo Slide">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+            <div class="mySlides fade">
+                <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+                    <h2 class="text-2xl font-bold text-black mb-3">QuizArt</h2>
+                    <p class="text-gray-700 mb-6">
+                        Um jogo de perguntas sobre Movimentos Artísticos para trabalho de artes.
+                        <img src="/public/quizart.png" alt="art" class="mb-6">
+                    </p>
+                    <!-- Link Clicável -->
+                    <a href="https://lokiiigo.github.io/Quiz-Art/" target="_blank"
+                        class="inline-block px-6 py-2 text-white font-semibold rounded-full bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-md">
+                        Saiba Mais!
+                    </a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+                    <h2 class="text-2xl font-bold text-black mb-3">Restaurant Tagline</h2>
+                    <p class="text-gray-700 mb-6">
+                        Um projeto de criação de site sobre um restaurante com a gastronomia totalmente inovador.
+                        <img src="/public/restaurant-tagline.png" alt="restaurant-tagline">
+                    </p>
+                    <!-- Link Clicável -->
+                    <a href="https://lokiiigo.github.io/RestaurantTagline/" target="_blank"
+                        class="inline-block px-6 py-2 text-white font-semibold rounded-full bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-md">
+                        Saiba Mais!
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botões Anterior e Próximo -->
+            <a class="absolute top-1/2 -translate-y-1/2 left-0 ml-2 cursor-pointer text-2xl p-2 sm:p-4 text-white font-bold transition-all duration-300 rounded-full bg-gray-800/50 hover:bg-gray-800/75 select-none"
+                onclick="plusSlides(-1)">
+                &#10094;
+            </a>
+            <a class="absolute top-1/2 -translate-y-1/2 right-0 mr-2 cursor-pointer text-2xl p-2 sm:p-4 text-white font-bold transition-all duration-300 rounded-full bg-gray-800/50 hover:bg-gray-800/75 select-none"
+                onclick="plusSlides(1)">
+                &#10095;
+            </a>
         </div>
 
-        <div class="p-6 md:p-8">
-            <h2 id="slide-title" class="text-2xl font-bold text-gray-800 mb-2 transition duration-500 ease-in-out"></h2>
-            <p id="slide-description" class="text-gray-600 transition duration-500 ease-in-out"></p>
+        <br>
 
-            <div id="dots-container" class="mt-4 flex justify-center space-x-2">
-                </div>
+        <!-- Pontos de navegação (Dots) -->
+        <div class="text-center mt-6">
+            <span
+                class="dot inline-block h-3 w-3 mx-1 bg-gray-300 rounded-full cursor-pointer transition-colors duration-300"
+                onclick="currentSlide(1)"></span>
+            <span
+                class="dot inline-block h-3 w-3 mx-1 bg-gray-300 rounded-full cursor-pointer transition-colors duration-300"
+                onclick="currentSlide(2)"></span>
+            <span
+                class="dot inline-block h-3 w-3 mx-1 bg-gray-300 rounded-full cursor-pointer transition-colors duration-300"
+                onclick="currentSlide(3)"></span>
         </div>
 
     </div>
 
     <script>
-        // Dados do Slideshow: URLs de imagem e suas descrições
-        const slidesData = [
-            {
-                imageUrl: "https://placehold.co/1200x675/1d4ed8/ffffff?text=Cenário+Urbano",
-                title: "A Metrópole Dinâmica",
-                description: "Explore a dinâmica e vibrante vida das grandes cidades. Esta imagem captura a essência da arquitetura moderna e do movimento constante."
-            },
-            {
-                imageUrl: "https://placehold.co/1200x675/047857/ffffff?text=Natureza+Exuberante",
-                title: "O Refúgio Natural",
-                description: "Mergulhe na tranquilidade da natureza. Uma vista serena de montanhas, florestas e águas cristalinas, perfeita para relaxamento e contemplação.",
-                link: "https://flowbite.com/docs/components/carousel/#indicators"
-            },
-            {
-                imageUrl: "https://placehold.co/1200x675/be185d/ffffff?text=Design+Abstrato",
-                title: "Formas e Cores",
-                description: "Uma composição de cores e formas geométricas que desafia a percepção. Representa a criatividade e a inovação no design contemporâneo."
-            },
-            {
-                imageUrl: "https://placehold.co/1200x675/7e22ce/ffffff?text=Tecnologia+e+Futuro",
-                title: "Inovação Tecnológica",
-                description: "Visão futurista de interfaces e conectividade. O caminho para um amanhã mais inteligente e interligado, impulsionado pela tecnologia."
-            },
-            {
-                imageUrl: "https://placehold.co/1200x675/f59e0b/ffffff?text=Culinária+Mundial",
-                title: "Sabores Globais",
-                description: "Uma jornada gastronômica explorando pratos e ingredientes de diferentes culturas ao redor do mundo. Celebre a diversidade culinária."
-            },
-            {
-                imageUrl: "https://placehold.co/1200x675/ef4444/ffffff?text=Arte+e+Cultura",
-                title: "Expressão Artística",
-                description: "Descubra a beleza e o poder da arte em suas diversas formas. Desde a pintura clássica até instalações modernas, a cultura em destaque."
-            }
-        ];
-
-        let currentSlideIndex = 0;
-        let slideInterval; // Variável para controlar o intervalo do autoplay (reprodução automática)
-
-        // Referências aos elementos DOM
-        const slideshowContainer = document.getElementById('slideshow-container');
-        const slideImage = document.getElementById('slide-image');
-        const slideTitle = document.getElementById('slide-title');
-        const slideDescription = document.getElementById('slide-description');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const dotsContainer = document.getElementById('dots-container');
-        const loadingIndicator = document.getElementById('loading-indicator');
-
+        // Variável global para rastrear o índice do slide atual
+        let slideIndex = 0;
+        let slideInterval; // Variável para o intervalo de tempo
 
         /**
-         * Inicia a reprodução automática do slideshow.
+         * Inicializa o slideshow.
          */
-        function startAutoplay() {
-            // Limpa qualquer intervalo existente antes de iniciar um novo
-            stopAutoplay(); 
-            // Avança o slide a cada 5 segundos (5000ms)
-            slideInterval = setInterval(nextSlide, 5000); 
+        function initializeSlideshow() {
+            // Garante que o índice comece em 0
+            showSlides(slideIndex);
+            // Configura o avanço automático a cada 5 segundos
+            startAutoAdvance();
         }
 
         /**
-         * Para a reprodução automática do slideshow.
+         * Inicia o avanço automático dos slides.
          */
-        function stopAutoplay() {
+        function startAutoAdvance() {
+            // Limpa qualquer intervalo anterior para evitar duplicação
             clearInterval(slideInterval);
+            slideInterval = setInterval(function () {
+                plusSlides(1); // Avança um slide
+            }, 5000); // 5000 milissegundos = 5 segundos
         }
 
         /**
-         * Cria e insere os indicadores de ponto (dots) no DOM.
+         * Avança ou retrocede os slides manualmente.
+         * @param {number} n - 1 para avançar, -1 para retroceder.
          */
-        function createDots() {
-            dotsContainer.innerHTML = ''; // Limpa os dots antigos antes de recriar
-            slidesData.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.classList.add('dot', 'h-3', 'w-3', 'rounded-full', 'bg-gray-400', 'hover:bg-indigo-500', 'transition', 'duration-300', 'focus:outline-none');
-                dot.setAttribute('data-index', index);
-                dot.setAttribute('aria-label', `Ir para o slide ${index + 1}`);
-                // Pausa o autoplay ao clicar em um dot e o reinicia em seguida
-                dot.onclick = () => {
-                    stopAutoplay();
-                    showSlide(index);
-                    startAutoplay();
-                };
-                dotsContainer.appendChild(dot);
-            });
+        function plusSlides(n) {
+            // Reinicia o timer após a interação manual
+            startAutoAdvance();
+            slideIndex += n;
+            showSlides(slideIndex);
         }
 
         /**
-         * Atualiza a imagem e o texto do slide com base no índice fornecido.
-         * Garante que o carregamento da imagem seja suave.
-         * @param {number} index - O índice do slide a ser exibido.
+         * Navega para um slide específico usando os pontos.
+         * @param {number} n - O número do slide (1, 2, 3...).
          */
-        function showSlide(index) {
-            // Garante que o índice esteja dentro dos limites (loop infinito)
-            if (index >= slidesData.length) {
-                index = 0;
-            } else if (index < 0) {
-                index = slidesData.length - 1;
+        function currentSlide(n) {
+            // n-1 porque o JavaScript usa índice zero (0, 1, 2...)
+            showSlides(n - 1);
+            // Reinicia o timer após a interação manual
+            startAutoAdvance();
+        }
+
+        /**
+         * Exibe o slide correspondente ao índice fornecido.
+         * @param {number} n - O índice do slide a ser exibido (0, 1, 2...).
+         */
+        function showSlides(n) {
+            const slides = document.querySelectorAll(".mySlides");
+            const dots = document.querySelectorAll(".dot");
+
+            if (slides.length === 0) return; // Sai se não houver slides
+
+            // Lógica para loop:
+            // Se o índice for maior que o último slide, volta para o primeiro (0)
+            if (n >= slides.length) {
+                slideIndex = 0;
             }
-            currentSlideIndex = index;
+            // Se o índice for menor que o primeiro slide (0), vai para o último
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
 
-            const slide = slidesData[currentSlideIndex];
+            // Garante que a variável global 'slideIndex' reflita o índice atual após o loop
+            n = slideIndex;
 
-            // 1. Mostrar o indicador de carregamento e esconder a imagem (para transição)
-            loadingIndicator.classList.remove('hidden');
-            slideImage.classList.add('opacity-0');
-            
-            // 2. Pré-carregar a nova imagem
-            const tempImg = new Image();
-            tempImg.onload = () => {
-                // 3. Quando a imagem carregar, atualizar a fonte e mostrar
-                slideImage.src = slide.imageUrl;
-                
-                // Atualizar o texto
-                slideTitle.textContent = slide.title;
-                slideDescription.textContent = slide.description;
+            // 1. Esconde todos os slides e remove a classe 'active-dot'
+            slides.forEach(slide => slide.style.display = "none");
+            dots.forEach(dot => dot.classList.remove("active-dot"));
 
-                // 4. Esconder indicador e mostrar a imagem com a transição CSS
-                loadingIndicator.classList.add('hidden');
-                slideImage.classList.remove('opacity-0');
-            };
-            tempImg.onerror = () => {
-                // Fallback em caso de erro no carregamento da imagem
-                slideImage.src = "https://placehold.co/1200x675/ef4444/ffffff?text=Erro+ao+Carregar+Imagem";
-                slideTitle.textContent = "Erro de Carregamento";
-                slideDescription.textContent = "Não foi possível carregar a imagem.";
-                loadingIndicator.classList.add('hidden');
-                slideImage.classList.remove('opacity-0');
-            };
-            tempImg.src = slide.imageUrl; // Inicia o carregamento
-
-            // 5. Atualizar os indicadores de ponto
-            document.querySelectorAll('.dot').forEach((dot, i) => {
-                if (i === currentSlideIndex) {
-                    dot.classList.remove('bg-gray-400');
-                    dot.classList.add('bg-indigo-600');
-                } else {
-                    dot.classList.remove('bg-indigo-600');
-                    dot.classList.add('bg-gray-400');
-                }
-            });
+            // 2. Exibe o slide atual e marca o ponto correspondente
+            slides[n].style.display = "block";
+            dots[n].classList.add("active-dot");
         }
 
-        /**
-         * Navega para o próximo slide.
-         */
-        function nextSlide() {
-            showSlide(currentSlideIndex + 1);
-        }
+        // Inicia o slideshow quando a janela estiver totalmente carregada
+        window.onload = initializeSlideshow;
 
-        /**
-         * Navega para o slide anterior.
-         */
-        function prevSlide() {
-            showSlide(currentSlideIndex - 1);
-        }
-
-        // --- Event Listeners para Interação Manual e Autoplay ---
-        
-        // Botão Anterior
-        prevBtn.addEventListener('click', () => {
-            stopAutoplay(); // Para o autoplay ao clicar manualmente
-            prevSlide();
-            startAutoplay(); // Reinicia
-        });
-        
-        // Botão Próximo
-        nextBtn.addEventListener('click', () => {
-            stopAutoplay(); // Para o autoplay ao clicar manualmente
-            nextSlide();
-            startAutoplay(); // Reinicia
-        });
-        
-        // Pausa no Hover: Para o autoplay quando o mouse entra na área do slideshow
-        slideshowContainer.addEventListener('mouseenter', stopAutoplay);
-        
-        // Reinicia no Mouse Leave: Inicia o autoplay quando o mouse sai da área
-        slideshowContainer.addEventListener('mouseleave', startAutoplay);
-
-
-        // Inicialização: Criar os dots, exibir o primeiro slide e iniciar o autoplay
-        window.onload = () => {
-            createDots();
-            showSlide(currentSlideIndex);
-            startAutoplay(); // Inicia a reprodução automática
-        };
     </script>
 </body>
+
 </html>
