@@ -172,7 +172,7 @@ export default function Portfolio() {
             <div className="max-w-4xl mx-auto">
               <Card className="glass-dark border-2 border-primary/20 p-12">
                 <div className="p-0">
-                  <p className="text-xl md:text-2xl leading-relaxed text-justify text-muted-foreground">
+                  <p className="text-xl md:text-2xl leading-relaxed text-center text-muted-foreground">
                     Sou um desenvolvedor web com foco em front-end e tenho experiência em criar interfaces de usuário
                     <span className="text-primary font-semibold"> atraentes e funcionais</span>.
                     Tenho paixão por tecnologia e estou sempre buscando aprender
