@@ -7,15 +7,13 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, Github, Mail, Linkedin } from 'lucide-react'
 
-import VideoBackground from './components/VideoBackground'
-
 const skills = [
   { name: 'PHP', color: 'bg-[#474A8A]', icon: './assets/php.png' },
   { name: 'JavaScript', color: 'bg-[#FFE100] text-black', icon: './assets/js.png' },
-  { name: 'HTML', color: 'bg-[#F1892D]', icon: './assets/html.png' },
-  { name: 'REACT', color: 'bg-[#00C4C1]', icon: './assets/atom.png' },
-  { name: 'TailwindCSS', color: 'bg-[#5FBCFF]', icon: './assets/css.png' },
-  { name: 'CSS', color: 'bg-[#5fbcff]', icon: './assets/css.png' },
+  { name: 'HTML', color: 'bg-[#C54F00]', icon: './assets/html.png' },
+  { name: 'REACT', color: 'bg-[#2C2C2C]', icon: './assets/react.png' },
+  { name: 'TailwindCSS', color: 'bg-[#2093E6]', icon: './assets/tailwindcss.png' },
+  { name: 'CSS', color: 'bg-[#2093E6]', icon: './assets/css.png' },
   { name: 'Next.JS', color: 'bg-black', icon: '▲' },
   { name: 'GitHub', bgColor: "text-[#fff]", color: 'bg-[#000]', icon: './assets/github.png' },
   { name: 'Git', color: 'bg-[#C54F00]', icon: './assets/social.png' },
@@ -139,15 +137,16 @@ export default function Portfolio() {
             >
               Desenvolvedor Web
             </motion.p>
+
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
               className="flex gap-4 justify-center"
             >
-              <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
-                Ver Projetos
-              </Button>
+                <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
+                  Ver Projetos
+                </Button>
               <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
                 Contato
               </Button>
@@ -173,7 +172,7 @@ export default function Portfolio() {
             <div className="max-w-4xl mx-auto">
               <Card className="glass-dark border-2 border-primary/20 p-12">
                 <div className="p-0">
-                  <p className="text-xl md:text-2xl leading-relaxed text-center text-muted-foreground">
+                  <p className="text-xl md:text-2xl leading-relaxed text-justify text-muted-foreground">
                     Sou um desenvolvedor web com foco em front-end e tenho experiência em criar interfaces de usuário
                     <span className="text-primary font-semibold"> atraentes e funcionais</span>.
                     Tenho paixão por tecnologia e estou sempre buscando aprender
@@ -338,12 +337,12 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-6 justify-center">
               <a href="mailto: lucascalle880@gmail.com">
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                  <Mail className="w-5 h-5" />
-                  Email
-                </Button>
-              </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                  <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
+                    <Mail className="w-5 h-5" />
+                    Email
+                  </Button>
+                </motion.div>
               </a>
               <a href="https://www.linkedin.com/in/lucas-chambi-48299435a/" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
