@@ -7,15 +7,17 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, Github, Mail, Linkedin } from 'lucide-react'
 
+import VideoBackground from './components/VideoBackground'
+
 const skills = [
   { name: 'PHP', color: 'bg-[#474A8A]', icon: './assets/php.png' },
   { name: 'JavaScript', color: 'bg-[#FFE100] text-black', icon: './assets/js.png' },
   { name: 'HTML', color: 'bg-[#F1892D]', icon: './assets/html.png' },
   { name: 'REACT', color: 'bg-[#00C4C1]', icon: './assets/atom.png' },
   { name: 'TailwindCSS', color: 'bg-[#5FBCFF]', icon: './assets/css.png' },
-  { name: 'CSS', color: 'bg-[#5400C1]', icon: './assets/css.png' },
+  { name: 'CSS', color: 'bg-[#5fbcff]', icon: './assets/css.png' },
   { name: 'Next.JS', color: 'bg-black', icon: '▲' },
-  { name: 'GitHub', color: 'bg-[#202020]', icon: './assets/github.png' },
+  { name: 'GitHub', bgColor: "text-[#fff]", color: 'bg-[#000]', icon: './assets/github.png' },
   { name: 'Git', color: 'bg-[#C54F00]', icon: './assets/social.png' },
   { name: 'MySQL', color: 'bg-[#006ECE]', icon: './assets/mysql-database.png' },
 ]
@@ -86,7 +88,7 @@ export default function Portfolio() {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
           >
-            LBC
+
           </motion.div>
           <div className="flex gap-8">
             {['Home', 'Sobre', 'Projetos', 'Contato'].map((item, index) => (
@@ -135,7 +137,7 @@ export default function Portfolio() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              Desenvolvedor Web 
+              Desenvolvedor Web
             </motion.p>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -172,9 +174,9 @@ export default function Portfolio() {
               <Card className="glass-dark border-2 border-primary/20 p-12">
                 <div className="p-0">
                   <p className="text-xl md:text-2xl leading-relaxed text-center text-muted-foreground">
-                    Sou um desenvolvedor web com foco em front-end e tenho experiência em criar interfaces de usuário 
-                    <span className="text-primary font-semibold"> atraentes e funcionais</span>. 
-                    Tenho paixão por tecnologia e estou sempre buscando aprender 
+                    Sou um desenvolvedor web com foco em front-end e tenho experiência em criar interfaces de usuário
+                    <span className="text-primary font-semibold"> atraentes e funcionais</span>.
+                    Tenho paixão por tecnologia e estou sempre buscando aprender
                     <span className="text-secondary font-semibold"> novas habilidades</span>.
                   </p>
                 </div>
@@ -183,46 +185,44 @@ export default function Portfolio() {
           </motion.div>
 
           {/* Skills */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="mt-24"
-      >
-        <h3 className="text-4xl md:text-5xl font-bold mb-12 text-center">Minhas Habilidades</h3>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className={`${skill.color} p-6 rounded-2xl text-center font-bold text-white shadow-2xl cursor-pointer`}
-            >
-              {/* AQUI ESTÁ A CORREÇÃO: Renderização Condicional */}
-              <div className="text-4xl mb-2 flex justify-center items-center">
-                {isImage(skill.icon) ? (
-                  // Se for um caminho de imagem, renderiza a tag <img>
-                  // Adicione w-10 h-10 (ou w-12 h-12 para text-4xl) para dar o tamanho
-                  <img
-                    src={skill.icon}
-                    alt={`${skill.name} icon`}
-                    className="w-10 h-10 object-contain"
-                  />
-                ) : (
-                  // Caso contrário (emoji/caractere), renderiza como texto
-                  skill.icon
-                )}
-              </div>
-              <div className="text-sm">{skill.name}</div>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-24"
+          >
+            <h3 className="text-4xl md:text-5xl font-bold mb-12 text-center">Minhas Habilidades</h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-6xl mx-auto">
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`${skill.color} p-6 rounded-2xl text-center font-bold text-white shadow-2xl cursor-pointer`}
+                >
+                  <div className="text-4xl mb-2 flex justify-center items-center">
+                    {isImage(skill.icon) ? (
+                      // Adicione w-10 h-10 (ou w-12 h-12 para text-4xl) para dar o tamanho
+                      <img
+                        src={skill.icon}
+                        alt={`${skill.name} icon`}
+                        className="w-10 h-10 object-contain"
+                      />
+                    ) : (
+                      // Caso contrário (emoji/caractere), renderiza como texto
+                      skill.icon
+                    )}
+                  </div>
+                  <div className="text-sm">{skill.name}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-      </div>
       </section>
 
       {/* Projects Section */}
@@ -273,7 +273,7 @@ export default function Portfolio() {
                       </p>
                       <Button
                         size="lg"
-                        className="rounded-full gap-2 glass" variant="outline" 
+                        className="rounded-full gap-2 glass" variant="outline"
                         onPress={() =>
                           window.open(projects[currentProject].link, '_blank', 'noopener,noreferrer')
                         }
@@ -310,9 +310,8 @@ export default function Portfolio() {
                 <button
                   key={index}
                   onClick={() => setCurrentProject(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentProject ? 'bg-primary w-12' : 'bg-muted'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentProject ? 'bg-primary w-12' : 'bg-muted'
+                    }`}
                 />
               ))}
             </div>
@@ -338,24 +337,22 @@ export default function Portfolio() {
               Estou sempre aberto a novos projetos e colaborações. Entre em contato!
             </p>
             <div className="flex gap-6 justify-center">
+              <a href="mailto: lucascalle880@gmail.com">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
                   <Mail className="w-5 h-5" />
                   Email
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                  <Github className="w-5 h-5" />
-                  GitHub
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                  <Linkedin className="w-5 h-5" />
-                  LinkedIn
-                </Button>
-              </motion.div>
+              </a>
+              <a href="https://www.linkedin.com/in/lucas-chambi-48299435a/" target="_blank" rel="noopener noreferrer">
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                  <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
+                    <Linkedin className="w-5 h-5" />
+                    LinkedIn
+                  </Button>
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         </div>
