@@ -30,7 +30,7 @@ const projects = [
     description: 'Um projeto em que cada obra de arte é concebida com esmero e originalidade.',
     image: '/art.png',
     link: 'https://lokiiigo.github.io/Art/',
-    tags: ['Web Design', 'Art'],
+    tags: ['Web Design', 'Arte'],
   },
   {
     title: 'Blog de Programação',
@@ -51,7 +51,7 @@ const projects = [
     description: 'Um projeto de criação de site sobre um restaurante com gastronomia totalmente inovadora.',
     image: '/restaurant-tagline.png',
     link: 'https://lokiiigo.github.io/RestaurantTagline/',
-    tags: ['Restaurant', 'Web Design'],
+    tags: ['Restaurante', 'Web Design'],
   },
 ]
 
