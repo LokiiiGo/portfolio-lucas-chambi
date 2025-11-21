@@ -8,16 +8,16 @@ import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, Github, Mail, Linkedin } from 'lucide-react'
 
 const skills = [
-  { name: 'PHP', color: 'bg-[#474A8A]', icon: './assets/php.png' },
-  { name: 'JavaScript', color: 'bg-[#FFE100] text-black', icon: './assets/js.png' },
   { name: 'HTML', color: 'bg-[#C54F00]', icon: './assets/html.png' },
-  { name: 'REACT', color: 'bg-[#2C2C2C]', icon: './assets/react.png' },
-  { name: 'TailwindCSS', color: 'bg-[#2093E6]', icon: './assets/tailwindcss.png' },
   { name: 'CSS', color: 'bg-[#2093E6]', icon: './assets/css.png' },
+  { name: 'JavaScript', color: 'bg-[#FFE100] text-black', icon: './assets/js.png' },
+  { name: 'REACT', color: 'bg-[#2C2C2C]', icon: './assets/react.png' },
+  { name: 'TailwindCSS', color: 'bg-slate-950', icon: './assets/tailwindcss.png' },
   { name: 'Next.JS', color: 'bg-black', icon: '▲' },
+  { name: 'PHP', color: 'bg-[#787CB5]', icon: './assets/php.png' },
+  { name: 'MySQL', color: 'bg-[#00758f]', icon: './assets/mysql-database.png' },
   { name: 'GitHub', bgColor: "text-[#fff]", color: 'bg-[#000]', icon: './assets/github.png' },
-  { name: 'Git', color: 'bg-[#C54F00]', icon: './assets/social.png' },
-  { name: 'MySQL', color: 'bg-[#006ECE]', icon: './assets/mysql-database.png' },
+  { name: 'Git', color: 'bg-[#C54F00]', icon: './assets/git-git.png' },
 ]
 const isImage = (icon: string) => {
   if (typeof icon !== 'string') return false;
@@ -30,28 +30,28 @@ const projects = [
     description: 'Um projeto em que cada obra de arte é concebida com esmero e originalidade.',
     image: '/art.png',
     link: 'https://lokiiigo.github.io/Art/',
-    tags: ['Web Design', 'Arte'],
+    tags: ['Web Design', 'Arte', 'HTML', 'CSS', 'BOOTSTRAP'],
   },
   {
     title: 'Blog de Programação',
     description: 'Site de blog onde usuários sem conhecimento prévio podem aprender sobre Linguagens de Programação e Lógica.',
     image: '/blog.png',
     link: 'https://github.com/LokiiiGo/Blog',
-    tags: ['Blog', 'Educação'],
+    tags: ['Blog', 'Educação', 'PHP'],
   },
   {
     title: 'QuizArt',
     description: 'Um jogo de perguntas sobre Movimentos Artísticos para trabalho de artes.',
     image: '/quizart.png',
     link: 'https://lokiiigo.github.io/Quiz-Art/',
-    tags: ['Game', 'Educação'],
+    tags: ['Game', 'Educação', 'HTML', 'TAILWINDCSS', 'JAVASCRIPT'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site sobre um restaurante com gastronomia totalmente inovadora.',
     image: '/restaurant-tagline.png',
     link: 'https://lokiiigo.github.io/RestaurantTagline/',
-    tags: ['Restaurante', 'Web Design'],
+    tags: ['Restaurante', 'Web Design', 'HTML', 'CSS', 'JAVASCRIPT'],
   },
 ]
 
@@ -144,9 +144,9 @@ export default function Portfolio() {
               transition={{ delay: 0.8 }}
               className="flex gap-4 justify-center"
             >
-                <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
-                  Ver Projetos
-                </Button>
+              <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
+                Ver Projetos
+              </Button>
               <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
                 Contato
               </Button>
