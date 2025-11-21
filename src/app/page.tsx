@@ -30,35 +30,35 @@ const projects = [
     description: 'Um projeto em que cada obra de arte é concebida com esmero e originalidade.',
     image: '/art.png',
     link: 'https://lokiiigo.github.io/Art/',
-    tags: ['Web Design', 'Arte', 'HTML', 'CSS', 'BOOTSTRAP'],
+    tags: [/* 'Web Design', 'Arte', */ 'HTML', 'CSS', 'BOOTSTRAP'],
   },
   {
     title: 'Blog de Programação',
     description: 'Site de blog onde usuários sem conhecimento prévio podem aprender sobre Linguagens de Programação e Lógica.',
     image: '/blog.png',
     link: 'https://github.com/LokiiiGo/Blog',
-    tags: ['Blog', 'Educação', 'PHP'],
+    tags: [/* 'Blog', 'Educação', */ 'PHP'],
   },
   {
     title: 'QuizArt',
     description: 'Um jogo de perguntas sobre Movimentos Artísticos para trabalho de artes.',
     image: '/quizart.png',
     link: 'https://quiz-art-seven.vercel.app/',
-    tags: ['Game', 'Educação', 'HTML', 'TAILWINDCSS', 'JAVASCRIPT'],
+    tags: [/* 'Game', 'Educação', */ 'HTML', 'TAILWINDCSS', 'JAVASCRIPT'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site sobre um restaurante com gastronomia totalmente inovadora.',
     image: '/restaurant-tagline.png',
     link: 'https://restaurant-tagline.vercel.app/',
-    tags: ['Restaurante', 'Web Design', 'HTML', 'CSS', 'JAVASCRIPT'],
+    tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JAVASCRIPT'],
   },
   {
     title: 'Cyber Security Intelligence',
     description: 'Painel de ameaças em tempo real',
     image: '/cyber.png',
     link: 'https://cyber-security-intelligence.vercel.app/visao-global',
-    tags: ['Sistemas de Segurança', 'Cyber', 'Next.JS', 'TailwindCSS', 'REACT'],
+    tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'Next.JS', 'TailwindCSS', 'REACT'],
   }
 ]
 
