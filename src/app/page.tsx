@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, Github, Mail, Linkedin } from 'lucide-react'
 
 const skills = [
-  { name: 'HTML', color: 'bg-[#C54F00]', icon: './assets/html.png' },
+  { name: 'HTML', color: 'bg-orange-500', icon: './assets/html.png' },
   { name: 'CSS', color: 'bg-[#2093E6]', icon: './assets/css.png' },
   { name: 'JavaScript', color: 'bg-[#FFE100] text-black', icon: './assets/js.png' },
   { name: 'REACT', color: 'bg-[#2C2C2C]', icon: './assets/react.png' },
@@ -17,7 +17,7 @@ const skills = [
   { name: 'PHP', color: 'bg-[#787CB5]', icon: './assets/php.png' },
   { name: 'MySQL', color: 'bg-[#00758f]', icon: './assets/mysql-database.png' },
   { name: 'GitHub', bgColor: "text-[#fff]", color: 'bg-[#000]', icon: './assets/github.png' },
-  { name: 'Git', color: 'bg-[#C54F00]', icon: './assets/git-git.png' },
+  { name: 'Git', color: 'bg-orange-700', icon: './assets/git-git.png' },
 ]
 const isImage = (icon: string) => {
   if (typeof icon !== 'string') return false;
@@ -43,16 +43,23 @@ const projects = [
     title: 'QuizArt',
     description: 'Um jogo de perguntas sobre Movimentos Artísticos para trabalho de artes.',
     image: '/quizart.png',
-    link: 'https://lokiiigo.github.io/Quiz-Art/',
+    link: 'https://quiz-art-seven.vercel.app/',
     tags: ['Game', 'Educação', 'HTML', 'TAILWINDCSS', 'JAVASCRIPT'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site sobre um restaurante com gastronomia totalmente inovadora.',
     image: '/restaurant-tagline.png',
-    link: 'https://lokiiigo.github.io/RestaurantTagline/',
+    link: 'https://restaurant-tagline.vercel.app/',
     tags: ['Restaurante', 'Web Design', 'HTML', 'CSS', 'JAVASCRIPT'],
   },
+  {
+    title: 'Cyber Security Intelligence',
+    description: 'Painel de ameaças em tempo real',
+    image: '/cyber.png',
+    link: 'https://cyber-security-intelligence.vercel.app/visao-global',
+    tags: ['Sistemas de Segurança', 'Cyber', 'Next.JS', 'TailwindCSS', 'REACT'],
+  }
 ]
 
 export default function Portfolio() {
