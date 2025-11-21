@@ -44,14 +44,14 @@ const projects = [
     description: 'Um jogo de perguntas sobre Movimentos Artísticos para trabalho de artes.',
     image: '/quizart.png',
     link: 'https://quiz-art-seven.vercel.app/',
-    tags: [/* 'Game', 'Educação', */ 'HTML', 'TAILWINDCSS', 'JAVASCRIPT'],
+    tags: [/* 'Game', 'Educação', */ 'HTML', 'TAILWINDCSS', 'JS'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site sobre um restaurante com gastronomia totalmente inovadora.',
     image: '/restaurant-tagline.png',
     link: 'https://restaurant-tagline.vercel.app/',
-    tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JAVASCRIPT'],
+    tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JS'],
   },
   {
     title: 'Cyber Security Intelligence',
