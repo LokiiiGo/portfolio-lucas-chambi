@@ -14,9 +14,3 @@ Ele foi construído com foco em performance e experiência do usuário, utilizan
 **TailwindCSS** - responsividade e estilo moderno.
 
 **Vercel** - para deploy de projeto.
-
-#
-
-[**Portfólio - Lucas Chambi**](https://portfolio-lucas-chambi.vercel.app/)
-![Prêvia do projeto](./design/image.png)
-
