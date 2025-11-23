@@ -29,14 +29,14 @@ const projects = [
     title: 'Art',
     description: 'Um projeto em que cada obra de arte é concebida com esmero e originalidade.',
     image: '/art.png',
-    link: 'https://lokiiigo.github.io/Art/',
+    link: 'https://lokiiigo.github.io/art/',
     tags: [/* 'Web Design', 'Arte', */ 'HTML', 'CSS', 'BOOTSTRAP'],
   },
   {
     title: 'Blog de Programação',
     description: 'Site de blog onde usuários sem conhecimento prévio podem aprender sobre Linguagens de Programação e Lógica.',
     image: '/blog.png',
-    link: 'https://github.com/LokiiiGo/Blog',
+    link: 'https://github.com/LokiiiGo/blog',
     tags: [/* 'Blog', 'Educação', */ 'PHP'],
   },
   {
@@ -351,7 +351,7 @@ export default function Portfolio() {
                   </Button>
                 </motion.div>
               </a>
-              <a href="https://www.linkedin.com/in/lucas-chambi-48299435a/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/lucas-calle-6677ba333/" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
                     <Linkedin className="w-5 h-5" />
