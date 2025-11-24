@@ -29,7 +29,7 @@ const projects = [
     title: 'Art',
     description: 'Um projeto em que cada obra de arte é concebida com esmero e originalidade.',
     image: '/art.png',
-    link: 'https://lokiiigo.github.io/art/',
+    link: 'https://github.com/LokiiiGo/art',
     tags: [/* 'Web Design', 'Arte', */ 'HTML', 'CSS', 'BOOTSTRAP'],
   },
   {
@@ -37,27 +37,27 @@ const projects = [
     description: 'Site de blog onde usuários sem conhecimento prévio podem aprender sobre Linguagens de Programação e Lógica.',
     image: '/blog.png',
     link: 'https://github.com/LokiiiGo/blog',
-    tags: [/* 'Blog', 'Educação', */ 'PHP'],
+    tags: [/* 'Blog', 'Educação', */ 'PHP', 'BOOTSTRAP'],
   },
   {
     title: 'QuizArt',
     description: 'Um jogo de perguntas sobre Movimentos Artísticos para trabalho de artes.',
     image: '/quizart.png',
-    link: 'https://quiz-art-seven.vercel.app/',
+    link: 'https://github.com/LokiiiGo/quiz-art',
     tags: [/* 'Game', 'Educação', */ 'HTML', 'TAILWINDCSS', 'JS'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site sobre um restaurante com gastronomia totalmente inovadora.',
     image: '/restaurant-tagline.png',
-    link: 'https://restaurant-tagline.vercel.app/',
+    link: 'https://github.com/LokiiiGo/restaurant-tagline',
     tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JS'],
   },
   {
     title: 'Cyber Security Intelligence',
     description: 'Painel de ameaças em tempo real',
     image: '/cyber.png',
-    link: 'https://cyber-security-intelligence.vercel.app/visao-global',
+    link: 'https://github.com/LokiiiGo/cyber-security-intelligence',
     tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'Next.JS', 'TailwindCSS', 'REACT'],
   }
 ]
@@ -151,12 +151,15 @@ export default function Portfolio() {
               transition={{ delay: 0.8 }}
               className="flex gap-4 justify-center"
             >
+              {/* A estrutura de botões está em correção */}
+              {/* 
               <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
                 Ver Projetos
               </Button>
               <Button size="lg" variant="outline" className="rounded-full px-8 text-lg glass">
                 Contato
               </Button>
+              */}
             </motion.div>
           </motion.div>
         </div>
@@ -325,7 +328,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Seção de contato */}
       <section id="contato" className="py-32 px-6">
         <div className="container mx-auto text-center">
           <motion.div
@@ -343,6 +346,7 @@ export default function Portfolio() {
               Estou sempre aberto a novos projetos e colaborações. Entre em contato!
             </p>
             <div className="flex gap-6 justify-center">
+              {/* possível mudança no email */}
               <a href="mailto: lucascalle880@gmail.com">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
@@ -351,6 +355,8 @@ export default function Portfolio() {
                   </Button>
                 </motion.div>
               </a>
+
+              {/* LinkedIn */}
               <a href="https://www.linkedin.com/in/lucas-calle-6677ba333/" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
