@@ -48,7 +48,7 @@ const projects = [
   },
   {
     title: 'Restaurant Tagline',
-    description: 'Um projeto de criação de site sobre um restaurante com gastronomia inovadora.',
+    description: 'Um projeto de criação de site de um restaurante com gastronomia inovadora.',
     image: '/restaurant-tagline.png',
     link: 'https://github.com/LokiiiGo/restaurant-tagline',
     tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JS'],
