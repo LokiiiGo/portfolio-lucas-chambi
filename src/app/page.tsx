@@ -345,6 +345,22 @@ export default function Portfolio() {
             <p className="text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
               Estou sempre aberto a novos projetos e colaborações. Entre em contato!
             </p>
+            {/* Ícone de Perfil Adicionado Aqui */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-12" // Adiciona margem inferior para separar do texto e botões
+            >
+            {/* Alteração de foto em breve */}
+              <img
+                src="/foto-lucas-chambi.jfif"
+                alt="Foto de Perfil de Lucas Bruno Calle Chambi"
+                className="w-60 h-60 rounded-full object-cover mx-auto border-4 border-primary shadow-lg"
+              />
+            </motion.div>
+            {/* Fim do Ícone de Perfil */}
             <div className="flex gap-6 justify-center">
               {/* possível mudança no email */}
               <a href="mailto: lucascalle880@gmail.com">
