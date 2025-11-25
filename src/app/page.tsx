@@ -357,7 +357,7 @@ export default function Portfolio() {
               <img
                 src="/foto-lucas-chambi.jfif"
                 alt="Foto de Perfil de Lucas Bruno Calle Chambi"
-                className="w-60 h-60 rounded-full object-cover mx-auto border-4 border-primary shadow-lg"
+                className="w-80 h-80 rounded-full object-cover mx-auto border-4 border-primary shadow-lg"
               />
             </motion.div>
             {/* Fim do Ícone de Perfil */}
