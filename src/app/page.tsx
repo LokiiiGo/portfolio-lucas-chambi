@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, Github, Mail, Linkedin } from 'lucide-react'
-
+import { Esteban } from 'next/font/google'
 const skills = [
   { name: 'HTML', color: 'bg-orange-500', icon: './assets/html.png' },
   { name: 'CSS', color: 'bg-[#2093E6]', icon: './assets/css.png' },
@@ -209,7 +209,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.00 }} /* Ajuste o atraso conforme necessário */
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className={`${skill.color} p-6 rounded-2xl text-center font-bold text-white shadow-2xl cursor-pointer`}
                 >
@@ -261,9 +261,9 @@ export default function Portfolio() {
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <div className="aspect-video relative overflow-hidden">
+                    <div className="aspect-video relative">
                       <img
-                        src={projects[currentProject].image || "/placeholder.svg"}
+                        src={projects[currentProject].image || "/seta-direita.png"}
                         alt={projects[currentProject].title}
                         className="w-full h-full object-cover"
                       />
@@ -271,7 +271,7 @@ export default function Portfolio() {
                     <div className="p-12">
                       <div className="flex gap-2 mb-4">
                         {projects[currentProject].tags.map((tag) => (
-                          <Badge key={tag} variant="outline" className="text-sm">
+                          <Badge key={tag} className="text-sm">
                             {tag}
                           </Badge>
                         ))}
@@ -353,7 +353,7 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-12" // Adiciona margem inferior para separar do texto e botões
             >
-            {/* Alteração de foto em breve */}
+              {/* Alteração de foto em breve */}
               <img
                 src="/foto-lucas-chambi.jfif"
                 alt="Foto de Perfil de Lucas Bruno Calle Chambi"
@@ -361,12 +361,13 @@ export default function Portfolio() {
               />
             </motion.div>
             {/* Fim do Ícone de Perfil */}
+
             <div className="flex gap-6 justify-center">
               {/* possível mudança no email */}
               <a href="mailto: lucascalle880@gmail.com">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                    <Mail className="w-5 h-5" />
+                    <Mail className="w-2 h-2" />
                     Email
                   </Button>
                 </motion.div>
@@ -376,8 +377,17 @@ export default function Portfolio() {
               <a href="https://www.linkedin.com/in/lucas-calle-6677ba333/" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                    <Linkedin className="w-5 h-5" />
+                    <Linkedin className="w-2 h-2" />
                     LinkedIn
+                  </Button>
+                </motion.div>
+              </a>
+
+              <a href="https://github.com/LokiiiGo" target="_blank" rel="noopener noreferrer">
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                  <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
+                    <Github className="w-2 h-2" />
+                    Github
                   </Button>
                 </motion.div>
               </a>
