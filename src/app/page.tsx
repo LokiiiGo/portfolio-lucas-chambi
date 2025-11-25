@@ -44,12 +44,12 @@ const projects = [
     description: 'Um jogo de perguntas sobre Movimentos Artísticos.',
     image: '/quizart.png',
     link: 'https://github.com/LokiiiGo/quiz-art',
-    tags: [/* 'Game', 'Educação', */ 'HTML', 'TAILWINDCSS', 'JS'],
+    tags: [/* 'Game', 'Educação', */ 'HTML', 'TailwindCSS', 'JS'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site de um restaurante com gastronomia inovadora.',
-    image: '/restaurant-tagline.png',
+    image: '/RestaurantTagline.png',
     link: 'https://github.com/LokiiiGo/restaurant-tagline',
     tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JS'],
   },
@@ -85,7 +85,7 @@ export default function Portfolio() {
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
         className="fixed top-0 left-0 right-0 z-50 glass"
       >
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -102,8 +102,8 @@ export default function Portfolio() {
                 href={`#${item.toLowerCase()}`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1, color: 'var(--color-primary)' }}
+                transition={{ delay: index * 0.00 }}
+                whileHover={{ scale: 1.5, color: 'var(--color-primary)' }}
                 className="text-sm font-medium transition-colors hover:text-primary"
               >
                 {item}
@@ -261,23 +261,22 @@ export default function Portfolio() {
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <div className="aspect-video relative">
+                    <div className="aspect-video relative overflow-hidden">
                       <img
-                        src={projects[currentProject].image || "/seta-direita.png"}
+                        src={projects[currentProject].image ?? "/seta-direita.png"}
                         alt={projects[currentProject].title}
-                        className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="p-12">
                       <div className="flex gap-2 mb-4">
                         {projects[currentProject].tags.map((tag) => (
-                          <Badge key={tag} className="text-sm">
+                          <Badge key={tag} variant="outline" className="text-1xl">
                             {tag}
                           </Badge>
                         ))}
                       </div>
-                      <h3 className="text-4xl font-bold mb-4">{projects[currentProject].title}</h3>
-                      <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                      <h3 className="text-3xl font-bold mb-4">{projects[currentProject].title}</h3>
+                      <p className="text-1xl text-muted-foreground mb-8 leading-relaxed">
                         {projects[currentProject].description}
                       </p>
                       <Button
@@ -297,19 +296,20 @@ export default function Portfolio() {
               {/* Navigation Buttons */}
               <Button
                 onPress={prevProject}
-                size="lg"
+                size="lx"
                 variant="outline"
-                className="absolute top-1/2 -left-6 -translate-y-1/2 rounded-full w-12 h-12 glass z-10"
+                className="absolute top-1/2 -left-6 bg-black -translate-y-1/2 rounded-full w-8 h-8 glass z-10"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5" />
               </Button>
+              
               <Button
                 onPress={nextProject}
-                size="lg"
+                size="lx"
                 variant="outline"
-                className="absolute top-1/2 -right-6 -translate-y-1/2 rounded-full w-12 h-12 glass z-10"
+                className="absolute top-1/2 -right-6 bg-black -translate-y-1/2 rounded-full w-8 h-8 glass z-10"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
 
@@ -319,7 +319,7 @@ export default function Portfolio() {
                 <button
                   key={index}
                   onClick={() => setCurrentProject(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentProject ? 'bg-primary w-12' : 'bg-muted'
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentProject ? 'bg-primary w-12' : 'bg-muted'
                     }`}
                 />
               ))}
@@ -357,17 +357,17 @@ export default function Portfolio() {
               <img
                 src="/foto-lucas-chambi.jfif"
                 alt="Foto de Perfil de Lucas Bruno Calle Chambi"
-                className="w-80 h-80 rounded-full object-cover mx-auto border-4 border-primary shadow-lg"
+                className="w-60 h-60 rounded-2xl object-cover mx-auto border-4 border-primary shadow-lg"
               />
             </motion.div>
             {/* Fim do Ícone de Perfil */}
 
-            <div className="flex gap-6 justify-center">
+            <div className="flex gap-2 justify-center">
               {/* possível mudança no email */}
               <a href="mailto: lucascalle880@gmail.com">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                    <Mail className="w-2 h-2" />
+                    <Mail className="w-4 h-4" />
                     Email
                   </Button>
                 </motion.div>
@@ -377,7 +377,7 @@ export default function Portfolio() {
               <a href="https://www.linkedin.com/in/lucas-calle-6677ba333/" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                    <Linkedin className="w-2 h-2" />
+                    <Linkedin className="w-4 h-4" />
                     LinkedIn
                   </Button>
                 </motion.div>
@@ -386,7 +386,7 @@ export default function Portfolio() {
               <a href="https://github.com/LokiiiGo" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-                    <Github className="w-2 h-2" />
+                    <Github className="w-4 h-4" />
                     Github
                   </Button>
                 </motion.div>
@@ -399,8 +399,8 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border/50">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p className="text-sm">
-            &copy; 2025 Lucas Bruno Calle Chambi.
+          <p className="text-2xl">
+            &copy; Pórtifolio - Lucas Chambi. Todos os Direitos Reservados
           </p>
         </div>
       </footer>
