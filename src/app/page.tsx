@@ -104,7 +104,7 @@ export default function Portfolio() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.00 }}
                 whileHover={{ scale: 1.5, color: 'var(--color-primary)' }}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-sm transition-colors hover:text-primary font-extrabold"
               >
                 {item}
               </motion.a>
