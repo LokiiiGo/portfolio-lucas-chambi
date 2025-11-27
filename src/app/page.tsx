@@ -400,7 +400,7 @@ export default function Portfolio() {
       <footer className="py-12 px-6 border-t border-border/50">
         <div className="container mx-auto text-center text-muted-foreground">
           <p className="text-2xl">
-            &copy; Pórtifolio - Lucas Chambi. Todos os Direitos Reservados
+            &copy; Portifólio - Lucas Chambi. Todos os Direitos Reservados
           </p>
         </div>
       </footer>
