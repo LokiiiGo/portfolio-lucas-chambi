@@ -30,35 +30,35 @@ const projects = [
     description: 'Um projeto em que cada obra de arte é concebida com esmero e originalidade.',
     image: '/art.png',
     link: 'https://github.com/LokiiiGo/art',
-    tags: [/* 'Web Design', 'Arte', */ 'HTML', 'CSS', 'BOOTSTRAP'],
+    tags: [/* 'Web Design', 'Arte', */ 'html', 'css', 'bootstrap'],
   },
   {
     title: 'Blog de Programação',
     description: 'Site de blog onde usuários sem conhecimento prévio podem aprender sobre Linguagens de Programação e Lógica de Programação.',
     image: '/blog.png',
     link: 'https://github.com/LokiiiGo/blog',
-    tags: [/* 'Blog', 'Educação', */ 'PHP', 'BOOTSTRAP'],
+    tags: [/* 'Blog', 'Educação', */ 'php', 'bootstrap'],
   },
   {
     title: 'QuizArt',
     description: 'Um jogo de perguntas sobre Movimentos Artísticos.',
     image: '/quizart.png',
     link: 'https://github.com/LokiiiGo/quiz-art',
-    tags: [/* 'Game', 'Educação', */ 'HTML', 'TailwindCSS', 'JS'],
+    tags: [/* 'Game', 'Educação', */ 'html', 'TailwindCSS', 'js'],
   },
   {
     title: 'Restaurant Tagline',
     description: 'Um projeto de criação de site de um restaurante com gastronomia inovadora.',
     image: '/RestaurantTagline.png',
     link: 'https://github.com/LokiiiGo/restaurant-tagline',
-    tags: [/* 'Restaurante', 'Web Design', */ 'HTML', 'CSS', 'JS'],
+    tags: [/* 'Restaurante', 'Web Design', */ 'html', 'css', 'js'],
   },
   {
     title: 'Cyber Security Intelligence',
     description: 'Painel de ameaças em tempo real',
     image: '/cyber.png',
     link: 'https://github.com/LokiiiGo/cyber-security-intelligence',
-    tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'Next.JS', 'TailwindCSS', 'REACT'],
+    tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'Next.JS', 'TailwindCSS', 'react'],
   }
 ]
 
@@ -165,7 +165,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Seção - Sobre */}
       <section id="sobre" className="py-32 px-6">
         <div className="container mx-auto">
           <motion.div
@@ -193,7 +193,7 @@ export default function Portfolio() {
             </div>
           </motion.div>
 
-          {/* Skills */}
+          {/* Habilidades */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -215,14 +215,12 @@ export default function Portfolio() {
                 >
                   <div className="text-4xl mb-2 flex justify-center items-center">
                     {isImage(skill.icon) ? (
-                      // Adicione w-10 h-10 (ou w-12 h-12 para text-4xl) para dar o tamanho
                       <img
                         src={skill.icon}
                         alt={`${skill.name} icon`}
                         className="w-10 h-10 object-contain"
                       />
                     ) : (
-                      // Caso contrário (emoji/caractere), renderiza como texto
                       skill.icon
                     )}
                   </div>
@@ -234,7 +232,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Seção - Projetos */}
       <section id="projetos" className="py-32 px-6">
         <div className="container mx-auto">
           <motion.div
@@ -293,7 +291,7 @@ export default function Portfolio() {
                 </div>
               </Card>
 
-              {/* Navigation Buttons */}
+              {/* Botões de Navegação */}
               <Button
                 onPress={prevProject}
                 size="lx"
@@ -351,7 +349,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-12" // Adiciona margem inferior para separar do texto e botões
+              className="mb-12" 
             >
               {/* Alteração de foto em breve */}
               <img
@@ -382,7 +380,8 @@ export default function Portfolio() {
                   </Button>
                 </motion.div>
               </a>
-
+              
+              {/* Github */}
               <a href="https://github.com/LokiiiGo" target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
