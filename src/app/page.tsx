@@ -270,7 +270,7 @@ export default function Portfolio() {
                     <div className="p-12">
                       <div className="flex gap-2 mb-4">
                         {projects[currentProject].tags.map((tag) => (
-                          <Badge key={tag} variant="outline" className="text-1xl">
+                          <Badge key={tag} variant="outline" className="text-1xl mb-4">
                             {tag}
                           </Badge>
                         ))}
