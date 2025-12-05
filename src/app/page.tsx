@@ -59,6 +59,13 @@ const projects = [
     image: '/cyber.png',
     link: 'https://github.com/LokiiiGo/cyber-security-intelligence',
     tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'Next.JS', 'TailwindCSS', 'react'],
+  },
+  {
+    title: "Stokki Life",
+    description: "Gerenciamento de estoque para microempreendedores",
+    image: "/stokki-life.png",
+    link: "https://github.com/stokki-life-tcc",
+    tags: [/* 'Esroque', 'Microepreededor'*/ 'laravel', 'mysql', 'tailwindcss'],
   }
 ]
 
