@@ -34,8 +34,8 @@ const projects = [
   },
   {
     title: 'Blog de Programação',
-    description: 'Site de blog onde usuários sem conhecimento prévio podem aprender sobre Linguagens de Programação e Lógica de Programação.',
-    image: '/blog.png',
+    description: 'Introdução ao Mundo da Programação',
+    image: '/programacao-blog.png',
     link: 'https://github.com/LokiiiGo/blog',
     tags: [/* 'Blog', 'Educação', */ 'php', 'bootstrap'],
   },
@@ -58,7 +58,7 @@ const projects = [
     description: 'Painel de ameaças em tempo real',
     image: '/cyber.png',
     link: 'https://github.com/LokiiiGo/cyber-security-intelligence',
-    tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'Next.JS', 'TailwindCSS', 'react'],
+    tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'next.js', 'tailwindcss', 'react'],
   },
   {
     title: "Stokki Life",
