@@ -42,7 +42,7 @@ const projects = [
   {
     title: 'QuizArt',
     description: 'Um jogo de perguntas sobre Movimentos Artísticos.',
-    image: '/quizart.png',
+    image: '/quiz-artt.png',
     link: 'https://github.com/LokiiiGo/quiz-art',
     tags: [/* 'Game', 'Educação', */ 'html', 'tailwindcss', 'js'],
   },
