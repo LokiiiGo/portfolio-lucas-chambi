@@ -44,7 +44,7 @@ const projects = [
     description: 'Um jogo de perguntas sobre Movimentos Artísticos.',
     image: '/quizart.png',
     link: 'https://github.com/LokiiiGo/quiz-art',
-    tags: [/* 'Game', 'Educação', */ 'html', 'TailwindCSS', 'js'],
+    tags: [/* 'Game', 'Educação', */ 'html', 'tailwindcss', 'js'],
   },
   {
     title: 'Restaurant Tagline',
