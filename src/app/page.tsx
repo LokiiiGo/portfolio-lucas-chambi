@@ -35,7 +35,7 @@ const projects = [
   {
     title: 'Blog de Programação',
     description: 'Introdução ao Mundo da Programação',
-    image: '/programacao-blog.png',
+    image: '/blog.png',
     link: 'https://github.com/LokiiiGo/blog',
     tags: [/* 'Blog', 'Educação', */ 'php', 'bootstrap'],
   },
