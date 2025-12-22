@@ -66,6 +66,13 @@ const projects = [
     image: "/stokki-life.png",
     link: "https://github.com/stokki-life-tcc",
     tags: [/* 'Esroque', 'Microepreededor'*/ 'laravel', 'mysql', 'tailwindcss'],
+  },
+  {
+    title: 'SubTrack',
+    description: "Gerenciador de assinaturas para controle financeiro pessoal",
+    image: '/subtrack-apk.png',
+    link: 'https://github.com/LokiiiGo/SubTrack',
+    tags: [/* 'Finanças Pessoais', 'Assinaturas', */ 'JS', 'React', 'Async Storage'],
   }
 ]
 
