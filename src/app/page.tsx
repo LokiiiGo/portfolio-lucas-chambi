@@ -368,7 +368,7 @@ export default function Portfolio() {
               {/* Alteração de foto em breve */}
               <img
                 src="/foto-lucas-chambi.jfif"
-                alt="Foto de Perfil de Lucas Bruno Calle Chambi"
+                alt="Foto de Perfil de Lucas Chambi - tirado em Agosto de 2024"
                 className="w-60 h-60 rounded-2xl object-cover mx-auto border-4 border-primary shadow-lg"
               />
             </motion.div>
