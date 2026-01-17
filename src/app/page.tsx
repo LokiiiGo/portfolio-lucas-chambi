@@ -51,7 +51,7 @@ const projects = [
     description: "Gerenciamento de estoque para microempreendedores",
     image: "/stokki-life.png",
     link: "https://github.com/stokki-life-tcc",
-    tags: [/* 'Esroque', 'Microepreededor'*/ 'laravel', 'mysql', 'tailwindcss'],
+    tags: [/* 'Estoque', 'Microempreendedor'*/ 'laravel', 'mysql', 'tailwindcss'],
   },
   {
     title: 'SubTrack',
