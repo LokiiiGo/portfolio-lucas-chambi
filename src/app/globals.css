@@ -27,9 +27,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #8d2424;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8d2424, #641717);
+  background: -webkit-linear-gradient(to right, #8d2424, #8d2424);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #8d2424, #641717);
+  background: -webkit-linear-gradient(to right, #8d2424, #8d2424);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
