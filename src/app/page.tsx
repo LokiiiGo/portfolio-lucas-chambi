@@ -40,6 +40,13 @@ const projects = [
     tags: [/* 'Game', 'Educação', */ 'html', 'tailwindcss', 'js'],
   },
   {
+    title: 'Simple Calculator',
+    description: 'Calculadora simples ccom operações básicas de matemática', 
+    image: '/simple-calculator.png',
+    link: 'https://github.com/LokiiiGo/simple-calculator',
+    tags: [/* 'Calculadora', 'Educação' */, 'next.js', 'tailwindcss', 'react'],
+  },
+  {
     title: 'Cyber Security Intelligence',
     description: 'Painel de ameaças em tempo real',
     image: '/cyber.png',
