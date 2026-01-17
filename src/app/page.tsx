@@ -37,7 +37,7 @@ const projects = [
     description: 'Um jogo de perguntas sobre Movimentos Artísticos.',
     image: '/quiz-artt.png',
     link: 'https://github.com/LokiiiGo/quiz-art',
-    tags: [/* 'Game', 'Educação', */ 'html', 'tailwindcss', 'js'],
+    tags: [/* 'Jogo de perguntas', 'Educação', */ 'html', 'tailwindcss', 'js'],
   },
   {
     title: 'Simple Calculator',
