@@ -47,13 +47,6 @@ const projects = [
     tags: [/* 'Calculadora', 'Educação' */, 'next.js', 'tailwindcss', 'react'],
   },
   {
-    title: 'Cyber Security Intelligence',
-    description: 'Painel de ameaças em tempo real',
-    image: '/cyber.png',
-    link: 'https://github.com/LokiiiGo/cyber-security-intelligence',
-    tags: [/* 'Sistemas de Segurança', 'Cyber',*/ 'next.js', 'tailwindcss', 'react'],
-  },
-  {
     title: "Stokki Life",
     description: "Gerenciamento de estoque para microempreendedores",
     image: "/stokki-life.png",
