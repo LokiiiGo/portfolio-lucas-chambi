@@ -24,11 +24,11 @@
 body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  background: #00668b;
+  background: #00759f;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #008fc4, #00b75f);
+  background: -webkit-linear-gradient(to right, #00759f, #00b75f);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #008fc4, #00b75f);
+  background: -webkit-linear-gradient(to right, #00759f, #00b75f);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
