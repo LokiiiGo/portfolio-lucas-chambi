@@ -41,7 +41,7 @@ const projects = [
   },
   {
     title: 'Simple Calculator',
-    description: 'Calculadora simples ccom operações básicas de matemática', 
+    description: 'Calculadora simples com operações básicas de matemática', 
     image: '/simple-calculator.png',
     link: 'https://github.com/LokiiiGo/simple-calculator',
     tags: [/* 'Calculadora', 'Educação' */, 'next.js', 'tailwindcss', 'react'],
