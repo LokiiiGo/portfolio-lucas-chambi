@@ -79,7 +79,7 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <div className="min-h-screen oswald bg-background overflow-hidden">
 
       <motion.header
         initial={{ y: -100, opacity: 0 }}
@@ -173,8 +173,7 @@ export default function Portfolio() {
                   <p className="text-xl md:text-2xl leading-relaxed text-center text-muted-foreground">
                     Sou um desenvolvedor web com foco em front-end e tenho experiência em criar interfaces de usuário
                     <span className="text-primary font-semibold"> atraentes e funcionais</span>.
-                    Tenho paixão por tecnologia e estou sempre buscando aprender
-                    <span className="text-secondary font-semibold"> novas habilidades</span>.
+                    Tenho paixão por tecnologia e estou sempre buscando aprender novas habilidades.
                   </p>
                 </div>
               </Card>
@@ -211,7 +210,7 @@ export default function Portfolio() {
                       skill.icon
                     )}
                   </div>
-                  <div className="text-sm">{skill.name}</div>
+                  <div className="text-base">{skill.name}</div>
                 </motion.div>
               ))}
             </div>
@@ -247,7 +246,7 @@ export default function Portfolio() {
                   >
                     <div className="aspect-video relative overflow-hidden">
                       <img
-                        src={projects[currentProject].image ?? "/seta-direita.png"}
+                        src={projects[currentProject].image ?? ''}
                         alt={projects[currentProject].title}
                       />
                     </div>

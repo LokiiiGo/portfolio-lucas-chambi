@@ -20,15 +20,20 @@
     --foreground: #ffffff;
   }
 }
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  background: #008bb1c2;
+  background: #cf0045a6;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00759f, #00b75f);
+  background: -webkit-linear-gradient(to right,#b9003ec2);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #00759f, #00b75f);
+  background: -webkit-linear-gradient(to right,#b9003ec2);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
