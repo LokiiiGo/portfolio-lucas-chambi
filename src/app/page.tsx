@@ -13,7 +13,7 @@ const skills = [
   { name: 'JavaScript', color: 'bg-[#FFE100] text-black', icon: './assets/js.png' },
   { name: 'REACT', color: 'bg-[#2C2C2C]', icon: './assets/react.png' },
   { name: 'TailwindCSS', color: 'bg-slate-950', icon: './assets/tailwindcss.png' },
-  { name: 'Next.JS', color: 'bg-black', icon: '▲' },
+  { name: 'Next.JS', color: 'bg-black', icon: './assets/nextjs-icon.png' },
   { name: 'PHP', color: 'bg-[#787CB5]', icon: './assets/php.png' },
   { name: 'MySQL', color: 'bg-[#00758f]', icon: './assets/mysql-database.png' },
   { name: 'GitHub', bgColor: "text-[#fff]", color: 'bg-[#000]', icon: './assets/github.png' },
