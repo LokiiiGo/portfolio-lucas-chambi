@@ -79,7 +79,7 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="min-h-screen oswald bg-background overflow-hidden">
+    <div className="min-h-screen oswald overflow-hidden">
 
       <motion.header
         initial={{ y: -100, opacity: 0 }}
@@ -172,7 +172,7 @@ export default function Portfolio() {
                 <div className="p-0">
                   <p className="text-xl md:text-2xl leading-relaxed text-center text-muted-foreground">
                     Sou um desenvolvedor web com foco em front-end e tenho experiência em criar interfaces de usuário
-                    <span className="text-primary font-semibold"> atraentes e funcionais</span>.
+                    atraentes e funcionais.
                     Tenho paixão por tecnologia e estou sempre buscando aprender novas habilidades.
                   </p>
                 </div>
