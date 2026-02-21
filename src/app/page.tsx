@@ -1,5 +1,6 @@
 'use client'
 
+{/* importando todos os componentes do projeto */}
 import Rodape from './components/Rodape'
 import Contato from './components/Contato'
 import Projetos from './components/Projetos'
