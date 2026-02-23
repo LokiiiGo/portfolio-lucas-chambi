@@ -12,7 +12,7 @@ export default function Habilidades() {
     {
       name: 'CSS',
       text: `Estilização com CSS3, incluindo uso de Flexbox, Grid Layout, media queries e boas 
-      práticas de organização de estilos para construção de layouts responsivos e adaptáveis a diferentes dispositivos.`,
+      práticas de organização de estilos para construção de layouts responsivos.`,
       color: 'bg-[#2093E6]',
       textColor: 'text-white',
       icon: './assets/css.png'

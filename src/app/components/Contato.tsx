@@ -14,11 +14,11 @@ export default function Contato(){
           >
             <h2 className="text-5xl md:text-7xl font-black mb-8">
               <span className="bg-clip-text text-white bg-gradient-to-r from-accent to-primary">
-                Vamos Conversar?
+                Vamos conversar?
               </span>
             </h2>
             <p className="text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Estou sempre aberto a novos projetos e colaborações. Entre em contato!
+              Estou aberto a novos projetos e colaborações. Entre em contato!
             </p>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}

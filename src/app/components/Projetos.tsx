@@ -19,13 +19,6 @@ export default function Projetos() {
             tags: [/* 'Blog', 'Educação', */ 'html', 'css', 'js', 'tailwindcss'],
         },
         {
-            title: 'QuizArt',
-            description: 'Um jogo de perguntas sobre Movimentos Artísticos.',
-            image: '/quiz-artt.png',
-            link: 'https://github.com/LokiiiGo/quiz-art',
-            tags: [/* 'Jogo de perguntas', 'Educação', */ 'html', 'tailwindcss', 'js'],
-        },
-        {
             title: 'Simple Calculator',
             description: 'Calculadora simples com operações básicas de matemática',
             image: '/simple-calculator.png',
@@ -37,14 +30,14 @@ export default function Projetos() {
             description: "Gerenciamento de estoque para microempreendedores",
             image: "/stokki-life.png",
             link: "https://github.com/stokki-life-tcc",
-            tags: [/* 'Estoque', 'Microempreendedor'*/ 'laravel', 'mysql', 'tailwindcss'],
+            tags: [/* 'Estoque', 'Microempreendedor'*/ 'laravel', 'tailwindcss'],
         },
         {
             title: 'SubTrack',
             description: "Gerenciador de assinaturas para controle financeiro pessoal",
             image: '/subtrack-apk.png',
             link: 'https://github.com/LokiiiGo/SubTrack',
-            tags: [/* 'Finanças Pessoais', 'Assinaturas', */ 'js', 'react', 'async storage'],
+            tags: [/* 'Finanças Pessoais', 'Assinaturas', */, 'react', 'async storage'],
         }
     ]
     const [currentProject, setCurrentProject] = useState(0)
