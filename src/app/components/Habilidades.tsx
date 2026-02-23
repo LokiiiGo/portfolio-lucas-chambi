@@ -19,28 +19,28 @@ export default function Habilidades() {
     },
     {
       name: 'JavaScript',
-      text: `Interatividade com manipulação do DOM, eventos e criação de efeitos dinâmicos`,
+      text: `Interatividade com manipulação do DOM, eventos e criação de efeitos dinâmicos.`,
       color: 'bg-[#FFE100]',
       textColor: 'text-black',
       icon: './assets/js.png'
     },
     {
       name: 'REACT',
-      text: `Criação de interfaces reativas e componentizadas, manipulação de estado com hooks e integração com bibliotecas de UI`,
+      text: `Criação de interfaces reativas e componentizadas, manipulação de estado com hooks e integração com bibliotecas de UI.`,
       color: 'bg-[#2C2C2C]',
       textColor: 'text-white',
       icon: './assets/react.png'
     },
     {
       name: 'TailwindCSS',
-      text: `Estilização rápida e eficiente com classes utilitárias, responsividade e temas customizáveis`,
+      text: `Estilização rápida e eficiente com classes utilitárias, responsividade e temas customizáveis.`,
       color: 'bg-slate-950',
       textColor: 'text-white',
       icon: './assets/tailwindcss.png'
     },
     {
       name: 'Next.JS',
-      text: `Desenvolvimento full-stack com React, renderização no servidor (SSR), geração estática (SSG) e roteamento baseado em arquivos`,
+      text: `Desenvolvimento full-stack com React, renderização no servidor (SSR), geração estática (SSG) e roteamento baseado em arquivos.`,
       color: 'bg-black',
       textColor: 'text-white',
       icon: './assets/nextjs-icon.png'
@@ -97,7 +97,7 @@ export default function Habilidades() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0 }}
-                whileHover={{ scale: 1, rotate: 2 }}
+                whileHover={{ scale: 1, rotate: 1 }}
                 className={`${skill.color} p-6 rounded-2xl text-left font-normal text-white shadow-2xl cursor-pointer`}
               >
                 <div className="text-4xl mb-2 flex justify-center items-center">

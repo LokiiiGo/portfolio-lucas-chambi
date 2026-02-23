@@ -30,7 +30,7 @@ export default function Sobre(){
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              Desenvolvedor Web
+              Desenvolvedor Front-End
             </motion.p>
 
             <motion.div
