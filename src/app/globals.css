@@ -30,5 +30,5 @@
 body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  background: #9c003c;
+  background-color: rgb(109, 0, 0);
 }
