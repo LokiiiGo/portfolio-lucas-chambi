@@ -11,7 +11,6 @@ import Rodape from './components/Rodape'
 export default function Home() {
   return (
     <div className="min-h-screen oswald overflow-hidden">
-
       {/* Cabeçalho principal */}
       <Cabecalho />
 
